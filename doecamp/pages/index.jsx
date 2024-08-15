@@ -1,10 +1,10 @@
 import React from "react";
-import "../style/global.css";
-import NavBar from "@/components/NavBar/NavBar";
-import ApresentacaoCard from "@/components/cards/ApresentacaoCard";
-import PagesCard from "@/components/cards/PagesCard";
-import Footer from "@/components/footer/footer";
-function _app() {
+import NavBar from "../components/NavBar/NavBar";
+import ApresentacaoCard from "../components/cards/ApresentacaoCard";
+import PagesCard from "../components/cards/PagesCard";
+import Footer from "../components/footer/footer";
+import '../app/globals.css'
+function index() {
   return (
     <>
       <NavBar />
@@ -43,4 +43,4 @@ function _app() {
   );
 }
 
-export default _app;
+export default index;
