@@ -23,7 +23,7 @@ function NavBar() {
   }, [router.pathname]);
 
   return (
-    <nav className="bg-[#f4f1d6] text-black  transition-colors duration-500 md:max-w-[1200px] md:mx-auto md:flex md:justify-between py-2 px-4 grid grid-rows-[auto_auto] grid-cols-1">
+    <nav className="bg-[#F5F5F5] text-black  transition-colors duration-500 md:max-w-[1200px] md:mx-auto md:flex md:justify-between py-2 px-4 grid grid-rows-[auto_auto] grid-cols-1">
       <div className="flex items-center justify-between">
         <img src="/logo/logo.png" alt="Logo" className="w-12 md:w-18 h-auto" />
         <h1 className="text-[#f8941c] text-xl md:ml-4 font-bold">DoeCamp</h1>

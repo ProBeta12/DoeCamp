@@ -10,7 +10,7 @@ function PagesCard({
 }) {
   return (
     <section
-      className="bg-cover bg-center bg-[#f4f1d6] max-w-full md:max-w-[1200px] mx-auto flex flex-col items-center text-center p-4"
+      className="bg-cover bg-center bg-[#F5F5F5] max-w-full md:max-w-[1200px] mx-auto flex flex-col items-center text-center p-4"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="flex flex-col justify-center flex-grow mt-6">
