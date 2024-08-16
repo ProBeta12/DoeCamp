@@ -68,7 +68,7 @@ O projeto está dividido em duas subpastas principais:
 
 4. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/doecamp.git
+   git clone https://github.com/ProBeta12/DoeCamp.git
    cd doecamp
 
 5. **Suba os containers Docker**:
