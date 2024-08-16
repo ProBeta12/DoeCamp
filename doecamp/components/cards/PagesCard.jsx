@@ -17,7 +17,7 @@ function PagesCard({
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-[#263741] font-bold mb-4">
           {title}
         </h1>
-        <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-[#263741] font-bold">
+        <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-[#263741] ">
           {description}
         </p>
       </div>

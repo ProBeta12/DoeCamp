@@ -10,7 +10,7 @@ function ApresentacaoCard() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl text-[#263741] font-bold mb-4">
           Bem-vindo ao DoeCamp!
         </h1>
-        <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-[#263741] font-bold">
+        <p className="text-md sm:text-lg md:text-xl lg:text-2xl text-[#263741] ">
           Aqui no DoeCamp, acreditamos no poder das doações para transformar
           vidas. Junte-se a nós para apoiar campanhas que fazem a diferença!
         </p>
