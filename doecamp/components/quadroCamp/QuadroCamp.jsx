@@ -17,6 +17,17 @@ function QuadroCamp({ paginaAtual }) {
     getCampanhas();
   }, []);
 
+  const handleEdit = () => {
+    alert("A funcionalidade de edição ainda não está disponível. Por favor, tente novamente mais tarde.");
+  };
+  
+  const handleDoar = () => {
+    alert("A funcionalidade de doação ainda não está disponível. Por favor, tente novamente mais tarde.");
+  };
+  
+  const handleDetalhes = () => {
+    alert("A funcionalidade de detalhes ainda não está disponível. Por favor, tente novamente mais tarde.");
+  };
   const handleDelete = async (id) => {
     if (window.confirm("Tem certeza de que deseja excluir esta campanha?")) {
       try {
@@ -43,7 +54,9 @@ function QuadroCamp({ paginaAtual }) {
         return (
           <div key={campanha._id} className={`bg-white shadow-lg rounded-lg p-6 mb-6 flex relative campaign-indicator ${indicatorClass}`}>
             {paginaAtual === 'editar' && (
-              <button className="absolute top-4 right-4 bg-blue-500 text-white py-1 px-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
+              <button 
+              onClick={() => handleEdit()}
+              className="absolute top-4 right-4 bg-blue-500 text-white py-1 px-3 rounded-lg shadow-md hover:bg-blue-600 transition duration-300">
                 Editar
               </button>
             )}
@@ -68,10 +81,14 @@ function QuadroCamp({ paginaAtual }) {
                 {metaCompleta ? 'Meta Atingida!' : `Falta: R$ ${faltaValor.toFixed(2).replace('.', ',')}`}
               </p>
               <div className="mt-4 flex space-x-4">
-                <button className="py-2 px-4 bg-[#f8941c] text-white rounded-lg shadow-md hover:bg-[#e87a1d] transition duration-300">
+                <button 
+                onClick={() => handleDoar()}
+                className="py-2 px-4 bg-[#f8941c] text-white rounded-lg shadow-md hover:bg-[#e87a1d] transition duration-300">
                   Apoiar Campanha
                 </button>
-                <button className="bg-[#263741] text-white py-2 px-4 rounded-lg shadow-md hover:bg-[#1d2a32] transition duration-300">
+                <button 
+                onClick={() => handleDetalhes()}
+                className="bg-[#263741] text-white py-2 px-4 rounded-lg shadow-md hover:bg-[#1d2a32] transition duration-300">
                   Detalhes
                 </button>
               </div>

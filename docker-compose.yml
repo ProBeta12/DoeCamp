@@ -1,0 +1,24 @@
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    networks:
+      - doecamp-network
+
+  doecamp:
+    build:
+      context: ./doecamp
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    networks:
+      - doecamp-network
+
+networks:
+  doecamp-network:
+    driver: bridge
