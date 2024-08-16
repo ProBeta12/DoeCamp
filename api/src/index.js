@@ -55,5 +55,5 @@ app.listen(port, () => {
   mongoose.connect(
     "mongodb+srv://ProBeta_12:ZyLcWWeyhwP8biZl@apidoecamp.t38kv.mongodb.net/?retryWrites=true&w=majority&appName=ApiDoeCamp"
   );
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Organize suas campanhas aqui, DoeCamp ${port}`);
 });
