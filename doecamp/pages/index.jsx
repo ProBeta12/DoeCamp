@@ -13,28 +13,29 @@ function index() {
         title="Explore Nossas Campanhas!"
         description="Na nossa página de campanhas, você encontrará uma coleção diversificada de iniciativas que estão transformando vidas e comunidades ao redor do mundo. Cada campanha é cuidadosamente selecionada para garantir que você tenha a oportunidade de apoiar causas significativas e impactantes."
         buttonText="Ver Todas as Campanhas"
-        buttonLink="/"
+        buttonLink="/campanhas"
+        backgroundImage=""
+      />
+      <PagesCard
+        title="Edite Suas Campanhas!"
+        description="Ajuste os detalhes das campanhas que você criou para garantir que elas continuem a fazer a diferença. Atualize informações, metas e mais para maximizar o impacto da sua iniciativa."
+        buttonText="Editar Campanhas"
+        buttonLink="/campanhasEdit"
         backgroundImage=""
       />
       <PagesCard
         title="Crie Sua Própria Campanha!"
         description="Temos o prazer de apoiar a criação de novas campanhas. Use nossa plataforma para começar sua própria iniciativa e fazer a diferença. Preencha os detalhes e nos ajude a transformar ideias em ações."
         buttonText="Criar Nova Campanha"
-        buttonLink="/"
+        buttonLink="/campanhasCriar"
         backgroundImage="/logo/banner_fundo.png"
       />
-      <PagesCard
-        title="Edite Suas Campanhas!"
-        description="Ajuste os detalhes das campanhas que você criou para garantir que elas continuem a fazer a diferença. Atualize informações, metas e mais para maximizar o impacto da sua iniciativa."
-        buttonText="Editar Campanhas"
-        buttonLink=""
-        backgroundImage=""
-      />
+      
       <PagesCard
         title="Deletar Campanhas"
         description="Se você precisa remover uma campanha que não está mais em andamento, este é o lugar certo. Confirme sua decisão e mantenha nossa plataforma atualizada."
         buttonText="Deletar Campanha"
-        buttonLink=""
+        buttonLink="/campanhasDelete"
         backgroundImage="/logo/banner_fundo.png"
       />
 
