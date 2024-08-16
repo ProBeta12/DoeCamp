@@ -47,3 +47,7 @@ body {
 .meta-nao-atendida::before {
   background-color: #dc3545; 
 }
+
+div,section,button,img {
+  caret-color: transparent;
+}
