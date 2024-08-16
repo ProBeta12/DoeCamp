@@ -1,30 +1,44 @@
 import React, { useState } from 'react';
+import { PostApi } from '@/services/PostApi';
 
 function FormCamp() {
     const [formData, setFormData] = useState({
-        nome: '',
-        descricao: '',
-        valorAlvo: '',
-        imagem: '',
-        arrecadado: '0'  // Valor inicial de arrecadado
+        nome: "",
+        descricao: "",
+        valorAlvo: 0,
+        arrecadado: 0,
+        imagem: ""
     });
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
             ...formData,
-            [name]: value
+            [name]: name === 'valorAlvo' || name === 'arrecadado' ? parseFloat(value) : value,
+            
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         console.log('Dados enviados:', formData);
-        // Aqui você pode adicionar a lógica para enviar os dados ao servidor ou manipular como necessário
+        try {
+            await PostApi(formData);
+            alert('Campanha criada com sucesso!');
+            setFormData({
+                nome: "",
+                descricao: "",
+                valorAlvo: 0,
+                arrecadado: 0,
+                imagem: ""
+            });
+        } catch (error) {
+            alert('Erro ao criar a campanha. Tente novamente.');
+        }
     };
 
     return (
-        <section className="max-w-4xl mx-auto md:max-w-[1200px] p-6 bg-white shadow-lg">
+        <section className="max-w-4xl mx-auto md:max-w-[1200px] p-6 bg-white text-[#263741] shadow-lg">
             <h1 className="text-3xl font-bold text-[#263741] mb-4">Criar</h1>
             <form onSubmit={handleSubmit}>
                 <div className="mb-4">
@@ -54,7 +68,7 @@ function FormCamp() {
                 <div className="mb-4">
                     <label htmlFor="valorAlvo" className="block text-lg font-semibold text-[#263741] mb-2">Valor a Ser Atingido</label>
                     <input
-                        type="text"
+                        type="number"
                         id="valorAlvo"
                         name="valorAlvo"
                         value={formData.valorAlvo}
@@ -66,13 +80,13 @@ function FormCamp() {
                 <div className="mb-4">
                     <label htmlFor="arrecadado" className="block text-lg font-semibold text-[#263741] mb-2">Arrecadado</label>
                     <input
-                        type="text"
+                        type="number"
                         id="arrecadado"
                         name="arrecadado"
                         value={formData.arrecadado}
                         onChange={handleChange}
                         className="w-full p-2 border border-gray-300 rounded-lg"
-                        readOnly  // Tornando o campo somente leitura
+                        
                     />
                 </div>
                 <div className="mb-4">
