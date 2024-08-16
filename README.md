@@ -74,7 +74,7 @@ O projeto está dividido em duas subpastas principais:
 5. **Suba os containers Docker**:
     - No diretório raiz do projeto
    ```bash
-   docker-compose up --build
+   docker-compose up
 6. **Acesse a aplicação**:
     - A API estará disponível em http://localhost:5000.
     - A interface web estará disponível em http://localhost:3000.
